@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navigation from '../Component/Navigation';
+import Navigation from '../Brewery/Navigation';
 
 const AddReview = () => {
   const [rating, setRating] = useState(1);

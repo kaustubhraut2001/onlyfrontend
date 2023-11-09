@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import Navigation from '../Component/Navigation';
+import Navigation from '../Brewery/Navigation';
 
 const BreweryDetails = () => {
   const { id } = useParams();

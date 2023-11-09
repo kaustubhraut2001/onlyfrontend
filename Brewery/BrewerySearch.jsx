@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Navigation from '../Component/Navigation';
+import Navigation from '../Brewery/Navigation';
 
 const BrewerySearch = () => {
   const [searchTerm, setSearchTerm] = useState('');
