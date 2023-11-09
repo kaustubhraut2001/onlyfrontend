@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navigation from '../Component/Navigation';
 
 const AddReview = () => {
   const [rating, setRating] = useState(1);
@@ -13,6 +14,8 @@ const AddReview = () => {
   };
 
   return (
+    <div>
+      <Navigation/>
     <div className="min-h-screen bg-gray-100 p-4">
       <h2 className="text-2xl font-bold mb-4">Add a Review</h2>
       <div className="mb-4">
@@ -43,6 +46,7 @@ const AddReview = () => {
       >
         Add Review
       </button>
+    </div>
     </div>
   );
 };

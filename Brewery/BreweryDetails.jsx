@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Navigation from '../Component/Navigation';
 
 const BreweryDetails = () => {
   const { id } = useParams();
   const [brewery, setBrewery] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get(`https://api.openbrewerydb.org/breweries/${id}`)
@@ -17,6 +20,8 @@ const BreweryDetails = () => {
   }, [id]);
 
   return (
+    <div>
+      <Navigation/>
     <div className="min-h-screen bg-gray-100 p-4">
       <h2 className="text-2xl font-bold mb-4">Brewery Details</h2>
       {brewery && (
@@ -29,6 +34,7 @@ const BreweryDetails = () => {
           )}
         </div>
       )}
+    </div>
     </div>
   );
 };

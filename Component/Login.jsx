@@ -1,12 +1,13 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import useNavigate from 'react-router-dom';
 
 const Login = () => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
   });
-
+const navigate = useNavigate();
   const { username, password } = formData;
 
   const handleChange = (e) => {
@@ -17,6 +18,7 @@ const Login = () => {
     e.preventDefault();
     // Add your login logic here, e.g., send a POST request to your API
     const res = await axios.post('https://testbackend-apcf.onrender.com/login', formData);
+    navigate('/');
     console.log('Login form submitted', formData, res);
   };
 
