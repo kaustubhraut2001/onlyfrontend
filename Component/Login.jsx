@@ -18,7 +18,7 @@ const navigate = useNavigate();
     e.preventDefault();
     // Add your login logic here, e.g., send a POST request to your API
     const res = await axios.post('https://testbackend-apcf.onrender.com/login', formData);
-    navigate('/');
+    navigate('/brewery');
     console.log('Login form submitted', formData, res);
   };
 
